@@ -20,10 +20,13 @@ const selectAllBooks = async () => {
 };
 
 const selectAllTitlesAndGenres = async () => {
-  const query = ``;
+  const query = `
+    SELECT title, genre
+    FROM books
+  `;
 
-  // const { rows } = await knex.raw(query);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  return rows;
 };
 
 const selectAllBooksOver250Pages = async () => {
