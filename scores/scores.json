@@ -41,7 +41,7 @@
       "AdQu7": 0
     },
     "Basic Queries": {
-      "BaQu1": 0,
+      "BaQu1": 1,
       "BaQu2": 0,
       "BaQu3": 0,
       "BaQu4": 0,
@@ -51,7 +51,7 @@
   },
   "humanReadable": {
     "Advanced Queries": "0/7",
-    "finalTestScore": "FINAL SCORE: 0/13",
-    "Basic Queries": "0/6"
+    "finalTestScore": "FINAL SCORE: 1/13",
+    "Basic Queries": "1/6"
   }
 }

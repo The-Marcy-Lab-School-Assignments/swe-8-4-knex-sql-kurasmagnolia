@@ -1,3 +1,5 @@
+/** @format */
+
 const knex = require('./knex');
 
 /* The knex object above has a knex.raw method that
@@ -8,10 +10,13 @@ was returned).
 */
 
 const selectAllBooks = async () => {
-  const query = ``;
+  const query = `
+    SELECT *
+    FROM books
+  `;
 
-  // const { rows } = await knex.raw(query);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  return rows;
 };
 
 const selectAllTitlesAndGenres = async () => {
