@@ -30,10 +30,14 @@ const selectAllTitlesAndGenres = async () => {
 };
 
 const selectAllBooksOver250Pages = async () => {
-  const query = ``;
+  const query = `
+    SELECT *
+    FROM books
+    WHERE pages > 250
+  `;
 
-  // const { rows } = await knex.raw(query);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  return rows;
 };
 
 const insertDuneBook = async () => {
