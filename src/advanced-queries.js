@@ -1,11 +1,16 @@
+/** @format */
+
 const knex = require('./knex');
 
 const countNumberOfBooks = async () => {
-  const query = ``;
+  const query = `
+    SELECT COUNT(*)
+    FROM books
+  `;
 
-  // const { rows } = await knex.raw(query);
-  // console.log('Number of books:', rows);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  console.log('Number of books:', rows);
+  return rows;
 };
 
 const selectAllLongOrMovieBooks = async () => {
