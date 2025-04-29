@@ -1,3 +1,5 @@
+/** @format */
+
 const {
   createTable,
   truncate,
@@ -7,8 +9,8 @@ const {
 
 const {
   dangerousDynamicQuery,
-  // safeDynamicQuery,
-  // multipleDynamicParamsQuery,
+  safeDynamicQuery,
+  multipleDynamicParamsQuery,
 } = require('./dynamic-queries');
 
 const main = async () => {
@@ -19,12 +21,12 @@ const main = async () => {
   // to play around with them!
 
   /* This is why we don't use straight string interpolation! */
-  await dangerousDynamicQuery();
+  // await dangerousDynamicQuery();
 
   /* These are safe because we use parameterized queries
   which are sanitized by knex */
-  // await safeDynamicQuery(2);
-  // await multipleDynamicParamsQuery(100, true);
+  await safeDynamicQuery(5626);
+  await multipleDynamicParamsQuery(100, true);
 
   // We remove the table rows (not the table) so we can run the queries again
   // without the database getting too big

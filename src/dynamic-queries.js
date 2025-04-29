@@ -1,3 +1,5 @@
+/** @format */
+
 const knex = require('./knex');
 
 const dangerousDynamicQuery = async () => {

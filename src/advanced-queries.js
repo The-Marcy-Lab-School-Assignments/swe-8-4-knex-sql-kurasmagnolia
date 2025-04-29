@@ -80,6 +80,7 @@ const countBooksInGenres = async () => {
     SELECT genre, COUNT(*)
     FROM books
     GROUP BY genre
+    ORDER BY COUNT(*) DESC
   `;
 
   const { rows } = await knex.raw(query);
