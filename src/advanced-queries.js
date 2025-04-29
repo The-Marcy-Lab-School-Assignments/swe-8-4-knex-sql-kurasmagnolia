@@ -76,11 +76,14 @@ const aliasIsMovie = async () => {
 };
 
 const countBooksInGenres = async () => {
-  const query = ``;
+  const query = `
+    SELECT genre, COUNT(*)
+    FROM books
+  `;
 
-  // const { rows } = await knex.raw(query);
-  // console.log('Genre count', rows);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  console.log('Genre count', rows);
+  return rows;
 };
 
 module.exports = {
