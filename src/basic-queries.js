@@ -64,10 +64,13 @@ const updateShortBooksToMovies = async () => {
 };
 
 const deleteDuneBook = async () => {
-  const query = ``;
+  const query = `
+    DELETE FROM books
+    WHERE title = 'Dune'
+  `;
 
-  // const { rowCount } = await knex.raw(query);
-  // return { rowCount };
+  const { rowCount } = await knex.raw(query);
+  return { rowCount };
 };
 
 module.exports = {
