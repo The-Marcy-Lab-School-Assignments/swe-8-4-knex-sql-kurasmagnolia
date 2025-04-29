@@ -53,12 +53,14 @@ const insertDuneBook = async () => {
 
 const updateShortBooksToMovies = async () => {
   const query = ` 
-    YOUR QUERY HERE
+    UPDATE books
+    SET is_movie = true
+    WHERE pages < 150
     RETURNING *;
   `;
 
-  // const { rows } = await knex.raw(query);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  return rows;
 };
 
 const deleteDuneBook = async () => {
