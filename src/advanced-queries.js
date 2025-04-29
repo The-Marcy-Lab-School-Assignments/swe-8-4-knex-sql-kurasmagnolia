@@ -40,11 +40,15 @@ const selectBooksBetween150And300Pages = async () => {
 };
 
 const orderBooksByPages = async () => {
-  const query = ``;
+  const query = `
+    SELECT *
+    FROM books
+    ORDER BY pages ASC
+  `;
 
-  // const { rows } = await knex.raw(query);
-  // console.log('Short to long:', rows);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  console.log('Short to long:', rows);
+  return rows;
 };
 
 const selectLongestBook = async () => {
