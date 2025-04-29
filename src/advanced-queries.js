@@ -65,11 +65,14 @@ const selectLongestBook = async () => {
 };
 
 const aliasIsMovie = async () => {
-  const query = ``;
+  const query = `
+    SELECT title, is_movie AS "Already Filmed"
+    FROM books
+  `;
 
-  // const { rows } = await knex.raw(query);
-  // console.log('Fancy output', rows);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  console.log('Fancy output', rows);
+  return rows;
 };
 
 const countBooksInGenres = async () => {
