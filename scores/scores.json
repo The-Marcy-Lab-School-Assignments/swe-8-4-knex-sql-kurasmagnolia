@@ -34,7 +34,7 @@
     "Advanced Queries": {
       "AdQu1": 1,
       "AdQu2": 1,
-      "AdQu3": 0,
+      "AdQu3": 1,
       "AdQu4": 0,
       "AdQu5": 0,
       "AdQu6": 0,
@@ -50,8 +50,8 @@
     }
   },
   "humanReadable": {
-    "Advanced Queries": "2/7",
-    "finalTestScore": "FINAL SCORE: 8/13",
+    "Advanced Queries": "3/7",
+    "finalTestScore": "FINAL SCORE: 9/13",
     "Basic Queries": "6/6"
   }
 }

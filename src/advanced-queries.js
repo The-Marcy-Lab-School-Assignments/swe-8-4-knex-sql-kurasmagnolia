@@ -27,11 +27,16 @@ const selectAllLongOrMovieBooks = async () => {
 };
 
 const selectBooksBetween150And300Pages = async () => {
-  const query = ``;
+  const query = `
+    SELECT *
+    FROM books
+    WHERE pages > 150
+    AND pages < 300
+  `;
 
-  // const { rows } = await knex.raw(query);
-  // console.log('150-300:', rows);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  console.log('150-300:', rows);
+  return rows;
 };
 
 const orderBooksByPages = async () => {
