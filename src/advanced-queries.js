@@ -52,11 +52,16 @@ const orderBooksByPages = async () => {
 };
 
 const selectLongestBook = async () => {
-  const query = ``;
+  const query = `
+    SELECT *
+    FROM books
+    ORDER BY pages DESC
+    LIMIT 1
+  `;
 
-  // const { rows } = await knex.raw(query);
-  // console.log('Longest Book:', rows);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  console.log('Longest Book:', rows);
+  return rows;
 };
 
 const aliasIsMovie = async () => {
