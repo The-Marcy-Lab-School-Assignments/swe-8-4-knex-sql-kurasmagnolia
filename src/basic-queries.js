@@ -42,12 +42,13 @@ const selectAllBooksOver250Pages = async () => {
 
 const insertDuneBook = async () => {
   const query = ` 
-    YOUR QUERY HERE
+    INSERT INTO books (title, genre, pages, is_movie)
+    VALUES ('Dune', 'Sci Fi', 500, false)
     RETURNING *;
   `;
 
-  // const { rows } = await knex.raw(query);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  return rows;
 };
 
 const updateShortBooksToMovies = async () => {
