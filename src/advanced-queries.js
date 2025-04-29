@@ -14,11 +14,16 @@ const countNumberOfBooks = async () => {
 };
 
 const selectAllLongOrMovieBooks = async () => {
-  const query = ``;
+  const query = `
+    SELECT *
+    FROM books
+    WHERE pages > 250
+    OR is_movie = true
+  `;
 
-  // const { rows } = await knex.raw(query);
-  // console.log('Long or movie books:', rows);
-  // return rows;
+  const { rows } = await knex.raw(query);
+  console.log('Long or movie books:', rows);
+  return rows;
 };
 
 const selectBooksBetween150And300Pages = async () => {
